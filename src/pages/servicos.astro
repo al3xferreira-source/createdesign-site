@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+  {
+    num: "01",
+    icon: "🎨",
+    title: "Design Gráfico",
+    desc: "Criamos materiais visuais que comunicam com clareza e impacto.",
+    items: [
+      "Cartazes e flyers",
+      "Catálogos e brochuras",
+      "Cartões de visita",
+      "Materiais promocionais",
+    ],
+  },
+  {
+    num: "02",
+    icon: "💡",
+    title: "Branding & Identidade",
+    desc: "Construímos identidades de marca sólidas, coerentes e memoráveis.",
+    items: [
+      "Naming e estratégia de marca",
+      "Logótipos e sistemas visuais",
+      "Manuais de identidade",
+      "Paletas e tipografias",
+    ],
+  },
+  {
+    num: "03",
+    icon: "🌐",
+    title: "Web Design & Desenvolvimento",
+    desc: "Websites rápidos, modernos e otimizados para conversão.",
+    items: [
+      "Websites institucionais",
+      "Landing pages",
+      "Lojas online",
+      "Otimização SEO",
+    ],
+  },
+  {
+    num: "04",
+    icon: "📱",
+    title: "Gestão de Redes Sociais",
+    desc: "Conteúdo que faz crescer a sua presença e envolver a audiência.",
+    items: [
+      "Calendário editorial",
+      "Criação de conteúdo",
+      "Gestão de comunidades",
+      "Campanhas patrocinadas",
+    ],
+  },
+  {
+    num: "05",
+    icon: "🎬",
+    title: "Vídeo & Motion Graphics",
+    desc: "Conteúdo dinâmico e vídeo que capta atenção e conta histórias.",
+    items: [
+      "Vídeos promocionais",
+      "Motion graphics",
+      "Reels e shorts",
+      "Edição e pós-produção",
+    ],
+  },
+  {
+    num: "06",
+    icon: "📈",
+    title: "Marketing Digital",
+    desc: "Estratégias de crescimento com base em dados e resultados.",
+    items: [
+      "Estratégia digital",
+      "Gestão de anúncios",
+      "Email marketing",
+      "Análise e relatórios",
+    ],
+  },
+];
+---
+
+<Layout title="Serviços — Create">
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Serviços</span>
+        <h2>Tudo o que a sua marca precisa</h2>
+        <p>
+          Cobrimos todo o espectro da comunicação e imagem — do design
+          ao digital, do conceito à execução.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        {
+          services.map((s) => (
+            <div class="card service-card fade-up">
+              <span class="service-num">{s.num}</span>
+              <div class="card-icon">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <ul>
+                {s.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Não sabe por onde começar?</h2>
+        <p>Fale connosco e ajudamos a encontrar a melhor solução para a sua marca.</p>
+        <a href="/contactos" class="btn btn-primary">Pedir Orçamento →</a>
+      </div>
+    </div>
+  </section>
+</Layout>

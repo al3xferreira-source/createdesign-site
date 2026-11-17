@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+  {
+    icon: "🎨",
+    title: "Design Gráfico",
+    desc: "Identidade visual, cartazes, flyers e materiais impressos com impacto.",
+  },
+  {
+    icon: "🌐",
+    title: "Web Design",
+    desc: "Websites rápidos e modernos, otimizados para conversão e SEO.",
+  },
+  {
+    icon: "📱",
+    title: "Redes Sociais",
+    desc: "Gestão de conteúdo e campanhas que fazem crescer a sua presença online.",
+  },
+  {
+    icon: "🎬",
+    title: "Vídeo & Motion",
+    desc: "Vídeos promocionais, motion graphics e conteúdo dinâmico para digital.",
+  },
+  {
+    icon: "💡",
+    title: "Branding",
+    desc: "Estratégia de marca, naming, logótipos e manuais de identidade.",
+  },
+  {
+    icon: "📈",
+    title: "Marketing Digital",
+    desc: "Estratégias de crescimento, anúncios e análise de resultados.",
+  },
+];
+---
+
+<Layout title="Create — Comunicação e Imagem">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <span class="eyebrow fade-up">Comunicação & Imagem</span>
+      <h1 class="fade-up">
+        Criamos marcas que<br />
+        <span class="gradient">comunicam e transformam</span>
+      </h1>
+      <p class="fade-up">
+        Somos um estúdio de comunicação e imagem. Damos vida a marcas
+        através de design, web e estratégia digital — do conceito ao resultado final.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="/servicos" class="btn btn-primary">Ver Serviços →</a>
+        <a href="/contactos" class="btn btn-outline">Falar Connosco</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">+120</span>
+        <span class="stat-label">Projetos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">+80</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Anos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Dedicação</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Serviços que fazem a diferença</h2>
+        <p>
+          Da identidade visual ao marketing digital, cobrimos todo o
+          espectro da comunicação da sua marca.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        {
+          services.map((s) => (
+            <div class="card fade-up">
+              <div class="card-icon">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Pronto para destacar a sua marca?</h2>
+        <p>Vamos conversar sobre o seu projeto e descobrir como podemos ajudar.</p>
+        <a href="/contactos" class="btn btn-primary">Iniciar Projeto →</a>
+      </div>
+    </div>
+  </section>
+</Layout>

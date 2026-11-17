@@ -1,0 +1,44 @@
+---
+const navItems = [
+  { label: "Início", href: "/" },
+  { label: "Sobre Nós", href: "/sobre-nos" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Contactos", href: "/contactos" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      create<span>design</span><span class="dot"></span>
+    </a>
+    <nav class="nav" id="nav">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class={currentPath === item.href ? "active" : ""}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <a href="/contactos" class="nav-cta">Falar Connosco</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("nav");
+  toggle?.addEventListener("click", () => {
+    nav?.classList.toggle("open");
+  });
+</script>

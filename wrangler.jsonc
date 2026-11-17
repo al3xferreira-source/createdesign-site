@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "createdesign",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    { "pattern": "createdesign.pt", "custom_domain": true },
+    { "pattern": "www.createdesign.pt", "custom_domain": true }
+  ]
+}

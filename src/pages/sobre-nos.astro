@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const values = [
+  {
+    title: "Criatividade",
+    desc: "Pensamos fora da caixa para criar soluções visuais únicas e memoráveis.",
+  },
+  {
+    title: "Estratégia",
+    desc: "Cada decisão de design é guiada por objetivos concretos e resultados.",
+  },
+  {
+    title: "Parceria",
+    desc: "Trabalhamos lado a lado com os clientes, do briefing à entrega final.",
+  },
+];
+---
+
+<Layout title="Sobre Nós — Create">
+  <!-- About -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow">Sobre Nós</span>
+          <h2>Uma equipa apaixonada por comunicação</h2>
+          <p>
+            A <strong>Create — Comunicação e Imagem</strong> nasceu da
+            vontade de ajudar empresas e marcas a comunicar melhor. Há mais
+            de 8 anos, criamos identidades visuais, websites e campanhas
+            digitais que conectam marcas às pessoas.
+          </p>
+          <p>
+            Acreditamos que boa comunicação não é só estética — é
+            estratégia. Por isso, combinamos criatividade com pensamento
+            analítico para entregar resultados que fazem a diferença no
+            negócio dos nossos clientes.
+          </p>
+          <p>
+            Trabalhamos com pequenas empresas, startups e marcas
+            estabelecidas, sempre com o mesmo compromisso: qualidade,
+            proximidade e dedicação total a cada projeto.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="monogram">C<span>D</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Os nossos valores</span>
+        <h2>O que nos move</h2>
+      </div>
+      <div class="values">
+        {
+          values.map((v) => (
+            <div class="value-item">
+              <h4>{v.title}</h4>
+              <p>{v.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">+120</span>
+        <span class="stat-label">Projetos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">+80</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Anos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Dedicação</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Vamos trabalhar juntos?</h2>
+        <p>Conte-nos sobre o seu projeto e descubra como podemos ajudar.</p>
+        <a href="/contactos" class="btn btn-primary">Falar Connosco →</a>
+      </div>
+    </div>
+  </section>
+</Layout>
