@@ -160,27 +160,15 @@ img {
   height: 68px;
 }
 
-.logo {
-  font-family: var(--font-head);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 4px;
+.brand-logo {
+  display: block;
+  width: 120px;
+  flex: 0 0 auto;
 }
 
-.logo span {
-  color: var(--accent);
-}
-
-.logo .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-2);
-  margin-left: 2px;
-  box-shadow: 0 0 12px var(--accent);
+.brand-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .nav {
@@ -671,7 +659,8 @@ img {
   gap: 4px;
 }
 
-.footer-info .logo {
+.footer-info .brand-logo {
+  width: 190px;
   margin-bottom: 8px;
 }
 
