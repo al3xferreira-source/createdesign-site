@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contactos — Create">
-  <section class="section">
-    <div class="container">
+  <section class="section contact-section">
+    <div class="container contact-container">
       <div class="section-header">
         <span class="eyebrow">Contactos</span>
         <h2>Vamos conversar</h2>
@@ -82,6 +82,123 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 </Layout>
+
+<style>
+  .contact-section {
+    padding: 120px 0;
+  }
+
+  .contact-container {
+    max-width: 1280px;
+  }
+
+  .contact-section :global(.section-header) {
+    margin-bottom: 72px;
+  }
+
+  .contact-section :global(.section-header h2) {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+  }
+
+  .contact-section :global(.section-header p) {
+    max-width: 680px;
+    font-size: 1.2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(340px, 0.8fr) minmax(520px, 1.2fr);
+    gap: 64px;
+  }
+
+  .contact-info {
+    gap: 36px;
+  }
+
+  .contact-item {
+    gap: 20px;
+  }
+
+  .contact-item-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 1.5rem;
+  }
+
+  .contact-item h4 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 1.05rem;
+  }
+
+  .contact-form {
+    padding: 44px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    min-height: 52px;
+    padding: 14px 18px;
+    font-size: 1.05rem;
+  }
+
+  .form-group textarea {
+    min-height: 180px;
+  }
+
+  .contact-form :global(.btn) {
+    min-height: 56px;
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 900px) {
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .contact-info {
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contact-section {
+      padding: 64px 0;
+    }
+
+    .contact-section :global(.section-header) {
+      margin-bottom: 48px;
+    }
+
+    .contact-form {
+      padding: 24px 20px;
+    }
+
+    .contact-item-icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>
 
 <script>
   const form = document.getElementById("contactForm");
